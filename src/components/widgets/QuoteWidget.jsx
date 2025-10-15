@@ -23,9 +23,9 @@ export default function QuoteWidget() {
             ) : error ? (
                 <ErrorMessage message={error} />
             ) : (
-                <blockquote className="italic text-gray-700">
+                <blockquote>
                     “{quote.quote}”
-                    <footer className="text-sm mt-2 text-gray-500">— {quote.author}</footer>
+                    <footer>— {quote.author}</footer>
                 </blockquote>
             )}
         </Widget>

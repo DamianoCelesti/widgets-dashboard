@@ -23,11 +23,11 @@ export default function NewsWidget() {
             ) : error ? (
                 <ErrorMessage message={error} />
             ) : (
-                <ul className="space-y-2 text-sm">
+                <ul>
                     {news.map((item) => (
                         <li key={item.id}>
                             <strong>{item.title}</strong>
-                            <p className="text-gray-600">{item.body.slice(0, 60)}...</p>
+                            <p>{item.body.slice(0, 60)}...</p>
                         </li>
                     ))}
                 </ul>

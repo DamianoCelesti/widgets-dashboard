@@ -27,10 +27,8 @@ export default function RecipeWidget() {
                 <ErrorMessage message={error} />
             ) : recipe ? (
                 <div>
-                    <p className="font-semibold">{recipe.name}</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                        {recipe.cuisine} — {recipe.difficulty}
-                    </p>
+                    <p>{recipe.name}</p>
+                    <p>{recipe.cuisine} — {recipe.difficulty}</p>
                 </div>
             ) : (
                 <ErrorMessage message="Nessuna ricetta trovata." />

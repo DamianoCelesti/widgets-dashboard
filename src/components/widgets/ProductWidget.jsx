@@ -26,14 +26,15 @@ export default function ProductWidget() {
             ) : error ? (
                 <ErrorMessage message={error} />
             ) : product ? (
-                <div className="flex flex-col items-center text-center">
+                <div>
                     <img
                         src={product.thumbnail}
                         alt={product.title}
-                        className="w-24 h-24 object-cover rounded-lg mb-2"
+                        className="product-image"
                     />
-                    <p className="font-semibold">{product.title}</p>
-                    <p className="text-sm text-gray-500">${product.price}</p>
+                    <p><strong>{product.title}</strong></p>
+                    <p>${product.price}</p>
+
                 </div>
             ) : (
                 <ErrorMessage message="Nessun prodotto trovato." />
