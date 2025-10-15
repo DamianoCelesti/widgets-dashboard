@@ -46,6 +46,18 @@ body {
   color: #222;
 }
 
+/* PRODUCT WIDGET */
+.product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* LOADER */
 .loader-container {
   display: flex;
