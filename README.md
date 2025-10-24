@@ -1,16 +1,82 @@
-# React + Vite
+# 📊 React Dashboard Widgets
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un progetto React moderno che mostra una **dashboard interattiva** con diversi widget dinamici (news, citazioni, ricette e prodotti), realizzati con **API simulate da DummyJSON** e **UI moderna e reattiva** in puro CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funzionalità
 
-## React Compiler
+- 📰 **NewsWidget** – mostra gli ultimi post di esempio.  
+- 💡 **QuoteWidget** – visualizza una citazione casuale.  
+- 🛒 **ProductWidget** – mostra un prodotto casuale con immagine e prezzo.  
+- 🍝 **RecipeWidget** – genera una ricetta casuale del giorno.  
+- 🎨 **Stile moderno** con transizioni fluide, ombre realistiche e design responsive.  
+- ⚙️ **Gestione stati** (loading, error, data) con componenti dedicati (`Loader`, `ErrorMessage`).  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧩 Struttura del progetto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+ ├── components/
+ │   ├── widgets/
+ │   │   ├── NewsWidget.jsx
+ │   │   ├── QuoteWidget.jsx
+ │   │   ├── ProductWidget.jsx
+ │   │   └── RecipeWidget.jsx
+ │   ├── Widget.jsx
+ │   ├── Loader.jsx
+ │   └── ErrorMessage.jsx
+ ├── utils/
+ │   └── api.js
+ ├── App.jsx
+ ├── main.jsx
+ └── index.css
+
+```
+---
+
+## ⚙️ Installazione e avvio
+
+
+```bash
+# 1️⃣ Clona il repository
+git clone https://github.com/tuo-username/nome-repo.git
+
+# 2️⃣ Entra nella cartella
+cd nome-repo
+
+# 3️⃣ Installa le dipendenze
+npm install
+
+# 4️⃣ Avvia il progetto in modalità sviluppo
+npm run dev
+Apri il browser su http://localhost:5173 (o la porta indicata) per vedere la dashboard.
+```
+
+## 🧠 Tecnologie utilizzate
+
+- ⚛️ **React 18**  
+- 🧱 **Vite** (per build e sviluppo rapido)  
+- 🎨 **CSS moderno** con variabili, gradienti e animazioni fluide  
+- 🌐 **DummyJSON API** per dati fittizi realistici  
+
+---
+
+## 📁 API usate
+
+Tutti i dati vengono caricati da **[https://dummyjson.com](https://dummyjson.com)**:
+
+- `/posts?limit=3` → per le news  
+- `/quotes/random` → per le citazioni  
+- `/products?limit=100` → per i prodotti  
+- `/recipes?limit=100` → per le ricette  
+
+---
+
+## 🧪 Esempi di comportamento
+
+- Durante il caricamento → compare un **loader animato**.  
+- In caso di errore → viene mostrato un messaggio chiaro con **animazione shake**.  
+- Hover sui widget → effetto di **elevazione e profondità**.  
